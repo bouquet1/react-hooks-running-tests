@@ -4,11 +4,17 @@ import React from "react";
 
 import Article from "../components/Article";
 
+//debug single element
 test("displays the text 'please pass this test'", () => {
   render(<Article />);
-  //screen.debug();
   const element = screen.queryByText("please pass this test");
   screen.debug(element);
   expect(element).toBeInTheDocument();
-  //expect(screen.queryByText("please pass this test")).toBeInTheDocument();
 });
+
+// OR general debug method
+// test("displays the text 'please pass this test'", ( => {
+//   render(<Article />);
+//     screen.debug();
+//   expect(screen.queryByText("please pass this test")).toBeInTheDocument();
+// }));
